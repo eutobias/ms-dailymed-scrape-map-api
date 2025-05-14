@@ -29,6 +29,10 @@ The events are registered in a cronjob to run every 24 hours.
 
 #### Auth
 
+There's already a user created with the following credentials:
+Login: **admin**
+Password: **strongPassword123**
+
 - `/api/v1/auth/login`: POST - Login a user
 
 #### Programs
@@ -47,6 +51,20 @@ Clone the repository and follow the instructions bellow:
 You need to have docker or similar installed to run the application, just enter in the application root directory and run the command docker commands as bellow:
 
 ```bash
-git clone #URL
+git clone https://github.com/eutobias/ms-dailymed-scrape-map-api
+cd ms-dailymed-scrape-map-api
 docker-compose up
 ```
+
+#### Development
+
+If you want to run the application in development mode, you need to have node (any version after than 20) and npm installed, just enter in the application root directory and run the command bellow:
+
+```bash
+git clone https://github.com/eutobias/ms-dailymed-scrape-map-api
+cd ms-dailymed-scrape-map-api
+npm install
+npm run start:dev
+```
+
+That's it! :)
