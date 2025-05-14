@@ -17,7 +17,9 @@ The events are registered in a cronjob to run every 24 hours.
 
 ---
 
-### Routes
+### API Documentation
+
+The application has  a swagger documentation, you can access it by going to `http://localhost:3000/swagger-api` in your browser.
 
 #### Users
 
@@ -42,7 +44,7 @@ Password: **strongPassword123**
 
 ---
 
-### How to start
+### Step-by-step setup
 
 Clone the repository and follow the instructions bellow:
 
@@ -65,6 +67,113 @@ git clone https://github.com/eutobias/ms-dailymed-scrape-map-api
 cd ms-dailymed-scrape-map-api
 npm install
 npm run start:dev
+```
+
+### Sample output
+
+  `/api/v1/users`
+  
+  ```json
+  [
+    {
+        "id": 1,
+        "username": "admin",
+        "accesslevel": 100
+    },
+    {
+        "id": 2,
+        "username": "user1",
+        "accesslevel": 1
+    },
+    {
+        "id": 3,
+        "username": "user50",
+        "accesslevel": 50
+    }
+  ]
+```
+
+`/api/v1/users/:id`
+
+ ```json
+ {
+    "id": 2,
+    "username": "user1",
+    "accesslevel": 1
+}
+```
+
+  `/api/v1/programs`
+
+  ```json
+[
+    {
+        "id": 29,
+        "indication": "Atopic Dermatitis",
+        "description": "DUPIXENT is indicated for the treatment of adult and pediatric patients aged 6 months and older with moderate-to-severe atopic dermatitis (AD) whose disease is not adequately controlled with topical prescription therapies or when those therapies are not advisable. DUPIXENT can be used with or without topical corticosteroids.",
+        "code": "L20.9"
+    },
+    {
+        "id": 30,
+        "indication": "Asthma",
+        "description": "DUPIXENT is indicated as an add-on maintenance treatment of adult and pediatric patients aged 6 years and older with moderate-to-severe asthma characterized by an eosinophilic phenotype or with oral corticosteroid dependent asthma .",
+        "code": "J45.50"
+    },
+    {
+        "id": 31,
+        "indication": "Chronic Rhinosinusitis with Nasal Polyps",
+        "description": "DUPIXENT is indicated as an add-on maintenance treatment in adult and pediatric patients aged 12 years and older with inadequately controlled chronic rhinosinusitis with nasal polyps (CRSwNP).",
+        "code": "J33.9"
+    },
+    {
+        "id": 32,
+        "indication": "Eosinophilic Esophagitis",
+        "description": "DUPIXENT is indicated for the treatment of adult and pediatric patients aged 1 year and older, weighing at least 15 kg, with eosinophilic esophagitis (EoE).",
+        "code": "K20.0"
+    },
+    {
+        "id": 33,
+        "indication": "Prurigo Nodularis",
+        "description": "DUPIXENT is indicated for the treatment of adult patients with prurigo nodularis (PN).",
+        "code": "L28.1"
+    },
+    {
+        "id": 34,
+        "indication": "Chronic Obstructive Pulmonary Disease",
+        "description": "DUPIXENT is indicated as an add-on maintenance treatment of adult patients with inadequately controlled chronic obstructive pulmonary disease (COPD) and an eosinophilic phenotype.",
+        "code": "J44.9"
+    },
+    {
+        "id": 35,
+        "indication": "Chronic Spontaneous Urticaria",
+        "description": "DUPIXENT is indicated for the treatment of adult and pediatric patients aged 12 years and older with chronic spontaneous urticaria (CSU) who remain symptomatic despite H1 antihistamine treatment.",
+        "code": "L50.1"
+    }
+]
+```
+
+  `/api/v1/programs?query=sinusitis`
+
+  ```json
+[
+    {
+        "id": 31,
+        "indication": "Chronic Rhinosinusitis with Nasal Polyps",
+        "description": "DUPIXENT is indicated as an add-on maintenance treatment in adult and pediatric patients aged 12 years and older with inadequately controlled chronic rhinosinusitis with nasal polyps (CRSwNP).",
+        "code": "J33.9"
+    }
+]
+```
+
+`/api/v1/programs/:id`
+
+```json
+{
+    "id": 33,
+    "indication": "Prurigo Nodularis",
+    "description": "DUPIXENT is indicated for the treatment of adult patients with prurigo nodularis (PN).",
+    "code": "L28.1"
+}
 ```
 
 That's it! :)
