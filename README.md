@@ -11,9 +11,9 @@ This is a NestJS/SQLite application, whose purpose is to scrape the DailyMed web
 Let´s start with the initialization of the application, besides registering all routes, modules and other needs, during initializion, the `dailymed-indications.controller` starts to listen for two events:
 
 - **IndicationEvents.SCRAPE_INDICATIONS**: triggered by `task-runner.service` when `onApplicationBootstrap` is called, which scrape and parse the indications from DailyMed website, and stores it in a temporary file `tmp/dailymed-indications.json`.
-- **IndicationEvents.MAP_INDICATIONS**: triggered by the same controller, runs after sucessfully scrape data from DailyMed website, then read the temporary file `tmp/dailymed-indications.json`, get the  ICD-10 code for each respective indication using a IA tool and stores it in sqlite database to be consumed by the api.
+- **IndicationEvents.MAP_INDICATIONS**: triggered by the same controller, runs after sucessfully scrape data from DailyMed website, then read the temporary file `tmp/dailymed-indications.json`, get the ICD-10 code for each respective indication using a IA tool (at this moment `meta-llama/llama-4-maverick-17b-128e-instruct` throw [groqcloud api](https://groq.com/)) and stores it in sqlite database to be consumed by the api.
 
-The events are registered in a cronjob to run every 24 hours.
+The events are registered in a cronjob to run every 24 hours and update the stored data.
 
 ---
 
@@ -72,7 +72,7 @@ npm run start:dev
 ### Sample output
 
   `/api/v1/users`
-  
+
   ```json
   [
     {
