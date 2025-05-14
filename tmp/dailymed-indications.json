@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Atopic Dermatitis",
+      "text": "DUPIXENT is indicated for the treatment of adult and pediatric patients aged 6 months and older with moderate-to-severe atopic dermatitis (AD) whose disease is not adequately controlled with topical prescription therapies or when those therapies are not advisable. DUPIXENT can be used with or without topical corticosteroids."
+    },
+    {
+      "id": 2,
+      "title": "Asthma",
+      "text": "DUPIXENT is indicated as an add-on maintenance treatment of adult and pediatric patients aged 6 years and older with moderate-to-severe asthma characterized by an eosinophilic phenotype or with oral corticosteroid dependent asthma ."
+    },
+    {
+      "id": 3,
+      "title": "Chronic Rhinosinusitis with Nasal Polyps",
+      "text": "DUPIXENT is indicated as an add-on maintenance treatment in adult and pediatric patients aged 12 years and older with inadequately controlled chronic rhinosinusitis with nasal polyps (CRSwNP)."
+    },
+    {
+      "id": 4,
+      "title": "Eosinophilic Esophagitis",
+      "text": "DUPIXENT is indicated for the treatment of adult and pediatric patients aged 1 year and older, weighing at least 15 kg, with eosinophilic esophagitis (EoE)."
+    },
+    {
+      "id": 5,
+      "title": "Prurigo Nodularis",
+      "text": "DUPIXENT is indicated for the treatment of adult patients with prurigo nodularis (PN)."
+    },
+    {
+      "id": 6,
+      "title": "Chronic Obstructive Pulmonary Disease",
+      "text": "DUPIXENT is indicated as an add-on maintenance treatment of adult patients with inadequately controlled chronic obstructive pulmonary disease (COPD) and an eosinophilic phenotype."
+    },
+    {
+      "id": 7,
+      "title": "Chronic Spontaneous Urticaria",
+      "text": "DUPIXENT is indicated for the treatment of adult and pediatric patients aged 12 years and older with chronic spontaneous urticaria (CSU) who remain symptomatic despite H1 antihistamine treatment."
+    }
+  ],
+  "expiration": 1747860584049
+}
