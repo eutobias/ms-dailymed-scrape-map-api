@@ -7,5 +7,5 @@ export default () => ({
     expiration: 1000 * 60 * 60 * 24,
     filename: 'tmp/dailymed-indications.json',
   },
-  grokApiKey: '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',
+  grokApiKey: '!@#!@#!@#!@#!@#!@#!@#!@#!@',
 });
